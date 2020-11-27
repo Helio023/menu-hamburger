@@ -1,0 +1,144 @@
+/* Preset  */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+/* Estilos para o corpo do site */
+body {
+  background-color: #eee;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos do cabeçalho */
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #80808042;
+  padding: 2rem 5rem;
+  position: relative;
+}
+
+@media (max-width: 20em) {
+  /* Em tela de 320px 320/16 = 20 */
+  .header {
+    padding: 2rem 2rem;
+  }
+}
+
+/* Estilos da barra de navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos do logo */
+.navbar__logo a:link,
+.navbar__logo a:visited {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #0084ff;
+  font-weight: 500;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
+}
+
+/* Estilos da lista de menu (ul) */
+.navbar__list {
+  list-style: none;
+  display: flex;
+}
+
+/* seleciona todos (li) excepto o último */
+.navbar__item:not(:last-child) {
+  margin-right: 2rem;
+}
+
+/* Estilos dos  links (a)  */
+.navbar__link:link,
+.navbar__link:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: gray;
+}
+
+/* Estilos dos  links (a) quando passa o mouse */
+.navbar__link:hover {
+  color: #0084ff;
+}
+
+/* Esconder o botao hamburger em telas maiores */
+.hamburger {
+  display: none;
+}
+
+/* Esconder o botao fechar em telas maiores */
+.close {
+  display: none;
+}
+
+/* Estilos para telas menores. Estes estilos ganham efeito em telas <= 704px */
+@media (max-width: 44em) {
+  .navbar__list {
+    display: none;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Estilos do menu (ul) em telas menores */
+  .open-close {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid #80808042;
+    padding: 5rem 0;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+  }
+
+  /* seleciona todos (li) excepto o primeiro */
+  .navbar__item:not(:first-child) {
+    margin-top: 3rem;
+  }
+
+  /* seleciona todos (li) excepto o último */
+  .navbar__item:not(:last-child) {
+    margin-right: 0rem;
+  }
+
+  /* Estilos do icon fechar em telas menores */
+  .close {
+    display: block;
+    position: absolute;
+    right: 2.5rem;
+    top: 2.5rem;
+    cursor: pointer;
+  }
+
+  #Icon-Color {
+    fill: #0084ff;
+  }
+}
